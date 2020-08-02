@@ -1,0 +1,22 @@
+.matcardcontent{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.custommatcard{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.buttonclass{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    margin-top: 10px;
+
+}

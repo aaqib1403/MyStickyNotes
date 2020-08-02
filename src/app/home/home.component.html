@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class ="toolbar">
+
+    <span>MyStickyNotes</span>
+
+
+    <div class = "tooobar-buttons">
+        <button mat-raised-button color="primary" routerLink="/login">Login</button>
+        <button mat-raised-button color="primary" routerLink="/register">Register</button>
+   
+    <section class="example-section">
+        <mat-slide-toggle
+            class="example-margin"
+            (change) = "onThemeChange($event)"
+            [checked]=false
+            [disabled]=false>
+          change Theme!
+        </mat-slide-toggle>
+      </section>
+    </div>
+
+    <button mat-raised-button color="primary" *ngIf = "authenticationService.logout"(click)="onLogout()">Logout</button>
+
+</mat-toolbar>

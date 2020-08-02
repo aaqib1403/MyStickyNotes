@@ -1,0 +1,33 @@
+
+
+<mat-card [formGroup]="loginForm" class="custommatcard">
+
+    <mat-card-content class="matcardcontent">
+        <h1>Login</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" formControlName="username">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password">
+
+        </mat-form-field>
+
+        <mat-checkbox formControlName="rememberme">remember me!</mat-checkbox>
+
+        <div class = "buttonclass">
+            <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+            <button mat-raised-button color="primary" routerLink="">Cancel</button>
+        </div>
+
+        <div *ngIf="errorflag">
+            {{errormessage}}
+        </div>
+    </mat-card-content>
+
+</mat-card>
+
+<button mat-raised-button color="primary" (click)="Delete()">Delete cookies</button>
