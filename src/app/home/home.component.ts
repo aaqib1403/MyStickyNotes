@@ -9,31 +9,39 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+ 
   constructor(private route: ActivatedRoute,
     private router: Router,
     public authenticationService: AuthenticationService,
     private http: HttpClient) { }
 
   ngOnInit(): void {
-    
+
     if (localStorage.getItem('currentUser')) {
       this.authenticationService.logout = true;
       this.router.navigate(["/landing"]);
     }
+
+  
+
+
   }
 
-  onLogout(){
+  /* onLogout(){
     
-    
+    this.authenticationService.onLogout();
     localStorage.removeItem('currentUser');
     this.authenticationService.currentUserSubject.next(null);
     this.router.navigate(['']);
     this.authenticationService.logout = false;
 
-}
+} */
 
-onThemeChange($event){
-  this.authenticationService.darktheme = !this.authenticationService.darktheme;
-}
+  onLogout() {
+    this.authenticationService.onLogout();
+  }
+
+  onThemeChange($event) {
+    this.authenticationService.darktheme = !this.authenticationService.darktheme;
+  }
 }

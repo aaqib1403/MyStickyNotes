@@ -19,7 +19,7 @@
         <mat-checkbox formControlName="rememberme">remember me!</mat-checkbox>
 
         <div class = "buttonclass">
-            <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+            <button mat-raised-button color="primary" [disabled] ="!loginForm.valid" (click)="onLogin()">Login</button>
             <button mat-raised-button color="primary" routerLink="">Cancel</button>
         </div>
 
@@ -29,5 +29,5 @@
     </mat-card-content>
 
 </mat-card>
-
-<button mat-raised-button color="primary" (click)="Delete()">Delete cookies</button>
+<!-- 
+<button mat-raised-button color="primary" (click)="Delete()">Delete cookies</button> -->

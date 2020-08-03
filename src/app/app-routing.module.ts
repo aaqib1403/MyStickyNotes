@@ -7,11 +7,11 @@ import { LandingComponent } from './landing/landing.component';
 
 
 const routes: Routes = [
-  
+  { path: '', component: HomeComponent , children:[
   { path: 'login', component: LoginComponent },
   { path: 'landing', component: LandingComponent },
 
-  { path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent }]}
 ];
 
 @NgModule({

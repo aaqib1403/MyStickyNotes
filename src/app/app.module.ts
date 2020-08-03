@@ -11,7 +11,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component'
-import {JwtInterceptor} from './jwt.interceptor'
+import {JwtInterceptor} from './jwt.interceptor';
+import { SpinnerComponent } from './spinner/spinner.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import {JwtInterceptor} from './jwt.interceptor'
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    LandingComponent
+    LandingComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

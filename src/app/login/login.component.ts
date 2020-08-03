@@ -27,28 +27,6 @@ export class LoginComponent implements OnInit {
       rememberme: []
     });
 
-    /*  this.http.post<any>("/mystickynotes/login", this.loginForm.value).subscribe((res: any) => {
-  
-  
-       if (res) {
-           if (res.validation) {
-             this.authenticationService.logout = true;
-               this.router.navigate(["/landing"]);
-           }
-           
-       }
- 
-   })  */
-
-
-    /* 
-      this.authenticationService.currentUserSubject.subscribe(res=>{
-        if(res){
-          if(res.message =="autologin"){
-          this.authenticationService.logout = true;
-                  this.router.navigate(["/landing"]);
-        }}
-      }) */
   }
   onLogin() {
     this.http.post<any>(`/mystickynotes/login`, this.loginForm.value)
@@ -73,15 +51,15 @@ export class LoginComponent implements OnInit {
         })
   }
 
-  onLogout(){
-    
-    
+  onLogout() {
+
+
     localStorage.removeItem('currentUser');
     this.authenticationService.currentUserSubject.next(null);
     this.router.navigate(['']);
     this.authenticationService.logout = false;
 
-}
+  }
 
   Delete() {
     this.http.get('/mystickynotes/deletecookie').subscribe(res => {
