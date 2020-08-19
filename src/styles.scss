@@ -1,5 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "./app/theme/bootstrap-reboot";
+@import "../mytheme";
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
+.mat-toolbar {
+    z-index: 1030;
+    position: fixed;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 64px;
+    width: 230px;
+    overflow: auto;
+    z-index: 10;
+    // background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+    -webkit-transition: left 0.3s ease, width 0.3s ease;
+    -o-transition: left 0.3s ease, width 0.3s ease;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+.app-content {
+    min-height: calc(100vh - 50px);
+    // margin-top: 80px;
+    padding: 30px;
+    padding-top: 64px;
+    // background-color: #fff;
+    -webkit-transition: margin-left 0.3s ease;
+    -o-transition: margin-left 0.3s ease;
+    transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .app-content {
+        margin-left: 245px;
+        margin-right: 15px;
+    }
+}
+
+.app-menu__item {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 12px 15px;
+    font-size: 1.08em;
+    border-left: 6px solid transparent;
+    -webkit-transition: border-left-color 0.3s ease, background-color 0.3s ease;
+    -o-transition: border-left-color 0.3s ease, background-color 0.3s ease;
+    transition: border-left-color 0.3s ease, background-color 0.3s ease;
+    color: #fff;
+    border-bottom: 2px solid #F2F2F2;
+}
+
+.app-menu__label {
+    white-space: nowrap;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    color: #2B2B2B;
+    font-size: 15px;
+}
+
+.app-nav,
+.app-menu {
+    padding-left: 0;
+    list-style: none;
+}

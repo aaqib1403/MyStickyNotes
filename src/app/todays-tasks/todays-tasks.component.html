@@ -1,0 +1,59 @@
+<div class="card task-cards">
+    <div class="card-body">
+        <div class="space-between">
+            <span>Today</span>
+            <span>
+
+        <!-- <button mat-icon-button [disabled]="selectedvalues.length>0 ? false:true" class="done-btn" (click)="onCompleted()">
+          <mat-icon>done</mat-icon>
+        </button>
+        <button mat-icon-button [disabled]="selectedvalues.length>0 ? false:true" class="dlt-btn" (click)="ondelete()">
+          <mat-icon>delete</mat-icon>
+        </button> -->
+
+      </span>
+        </div>
+        <ul class="list-style-none feed-body mb-0 pb-0">
+            <li class="task" *ngFor="let data of taskdetails">
+                <div>
+                    <span>
+            <mat-checkbox (change)="onchange($event,data)" class="example-margin"></mat-checkbox>
+          </span>
+                    <span class="d-inline-block">
+            <p>{{data.taskdetails}}</p>
+            <p class="text-muted">Date : {{data.createdon}}</p>
+          </span>
+                    <span [ngClass]="{'pending': data.status == 'pending', 'complted': data.status == 'Completed'}" class="ml-auto complted">Status : {{data.status}}</span>
+                </div>
+            </li>
+
+            <!-- <li class="task">
+        <div>
+          <span>
+            <mat-checkbox class="example-margin"></mat-checkbox>
+          </span>
+          <span class="d-inline-block">
+            <p>exam in Udemy need to attend </p>
+            <p class="text-muted">Date : 16-08-2020</p>
+          </span>
+          <span class="ml-auto pending">Pending</span>
+        </div>
+
+      </li>
+
+      <li class="task">
+        <div>
+          <span>
+            <mat-checkbox class="example-margin"></mat-checkbox>
+          </span>
+          <span class="d-inline-block">
+            <p>sample task task sample exam</p>
+            <p class="text-muted">Date : 19-08-2021</p>
+          </span>
+          <span class="ml-auto complted">Complted</span>
+        </div>
+
+      </li> -->
+        </ul>
+    </div>
+</div>

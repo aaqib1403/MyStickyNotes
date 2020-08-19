@@ -1,0 +1,15 @@
+.tooobar-buttons {
+    display: flex;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bg-image {
+    background-image: url(../../assets/background.png);
+    height: calc(100vh - 64px);
+    width: 100%;
+    background-size: cover;
+}

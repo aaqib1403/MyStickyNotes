@@ -1,18 +1,16 @@
-.tooobar-buttons{
-
+.tooobar-buttons {
     display: flex;
-    
-
 }
 
-.toolbar{
+.toolbar {
     display: flex;
     justify-content: space-between;
+    height: 8%
 }
-.bg-image{
+
+.bg-image {
     background-image: url(../../assets/background.png);
     height: calc(100vh - 64px);
     width: 100%;
     background-size: cover;
-
 }

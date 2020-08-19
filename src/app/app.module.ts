@@ -13,6 +13,10 @@ import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component'
 import {JwtInterceptor} from './jwt.interceptor';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { CompletedTasksComponent } from './completed-tasks/completed-tasks.component';
+import { PendingTasksComponent } from './pending-tasks/pending-tasks.component';
+import { TotalTasksComponent } from './total-tasks/total-tasks.component';
+import { TodaysTasksComponent } from './todays-tasks/todays-tasks.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { SpinnerComponent } from './spinner/spinner.component';
     RegisterComponent,
     HomeComponent,
     LandingComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    CompletedTasksComponent,
+    PendingTasksComponent,
+    TotalTasksComponent,
+    TodaysTasksComponent
   ],
   imports: [
     BrowserModule,
