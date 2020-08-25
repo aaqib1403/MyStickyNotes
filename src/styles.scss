@@ -85,3 +85,62 @@ body {
     padding-left: 0;
     list-style: none;
 }
+
+.feed-widget .feed-body .task {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.task .mat-checkbox {
+    margin-right: 10px;
+}
+
+ul.list-style-none li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+ul.list-style-none li {
+    list-style: none;
+}
+
+.complted,
+.done-btn .mat-icon {
+    color: green;
+}
+
+.done-btn,
+.dlt-btn {
+    background-color: #fff;
+}
+
+.card.task-cards {
+    border: 0px;
+    // background-color: green;
+    .card-body {
+        padding: 0px;
+    }
+}
+
+ul {
+    padding: 20px;
+}
+
+.pending,
+.dlt-btn .mat-icon {
+    color: red;
+}
+
+.ml-auto {
+    float: right;
+}
+
+.task {
+    p {
+        margin: 0px;
+    }
+}

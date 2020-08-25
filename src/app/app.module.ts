@@ -17,6 +17,10 @@ import { CompletedTasksComponent } from './completed-tasks/completed-tasks.compo
 import { PendingTasksComponent } from './pending-tasks/pending-tasks.component';
 import { TotalTasksComponent } from './total-tasks/total-tasks.component';
 import { TodaysTasksComponent } from './todays-tasks/todays-tasks.component';
+import { AddeditdialogComponent } from './addeditdialog/addeditdialog.component';
+import { ChangestatusdialogComponent } from './changestatusdialog/changestatusdialog.component';
+import { DatePipe } from '@angular/common';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
 @NgModule({
@@ -30,7 +34,9 @@ import { TodaysTasksComponent } from './todays-tasks/todays-tasks.component';
     CompletedTasksComponent,
     PendingTasksComponent,
     TotalTasksComponent,
-    TodaysTasksComponent
+    TodaysTasksComponent,
+    AddeditdialogComponent,
+    ChangestatusdialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,9 @@ import { TodaysTasksComponent } from './todays-tasks/todays-tasks.component';
     HttpClientModule,
     MaterialModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

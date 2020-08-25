@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>{{data.header}}</h1>
+<div mat-dialog-content [formGroup]="addeditform">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="createdon" formControlName="createdon">
+        <mat-datepicker-toggle matSuffix [for]="createdon"></mat-datepicker-toggle>
+        <mat-datepicker #createdon></mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Taskname</mat-label>
+        <input matInput placeholder="Taskname" formControlName="taskdetails">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+            <mat-option value="Completed">
+                Completed
+            </mat-option>
+            <mat-option value="Pending">
+                Pending
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="onOk()" cdkFocusInitial>Ok</button>
+    <button mat-button (click)="onCancel()">Cancel</button>
+
+</div>

@@ -40,6 +40,7 @@ import {MatSortModule} from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -50,7 +51,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     BrowserModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
-   
+    MatNativeDateModule, 
+    
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,

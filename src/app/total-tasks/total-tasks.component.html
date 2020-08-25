@@ -1,1 +1,27 @@
-<p>total-tasks works!</p>
+<div class="card task-cards">
+    <div class="card-body">
+        <div class="space-between">
+
+            <span>
+
+      </span>
+        </div>
+        <ul class="list-style-none feed-body mb-0 pb-0">
+            <li class="task" *ngFor="let data of taskdetails">
+                <div>
+                    <span>
+            <mat-checkbox (change)="onchange($event,data)" class="example-margin"></mat-checkbox>
+          </span>
+                    <span class="d-inline-block">
+            <p>{{data.taskdetails}}</p>
+            <p class="text-muted">Date : {{data.createdon}}</p>
+          </span>
+                    <span [ngClass]="{'pending': data.status == 'Pending', 'complted': data.status == 'Completed'}" class="ml-auto complted">Status : {{data.status}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<mat-paginator #paginator [pageSizeOptions]="[3,5, 10, 20]" [showFirstLastButtons]="true" [length]="totalsize" (page)="handlePage($event)">
+</mat-paginator>
